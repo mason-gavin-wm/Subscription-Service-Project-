@@ -15,24 +15,45 @@
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+    <script src="classie.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOn = 300,
+                    header = document.querySelector("header");
+                if (distanceY > shrinkOn) {
+                    classie.add(header,"smaller");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                    }
+                }
+            });
+        }
+        window.onload = init();
+    </script>
 </head>
 
 <body>
 
 <!--NAV START-->
-<div class="nav">
-    <div class="container">
-        <ul class="pull-left">
-            <li><a href="#">Packages</a></li>
-            <li><a href="#">Customize Your Own</a></li>
-        </ul>
-        <ul class="pull-right">
-            <li><a href="#">FAQS</a></li>
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">My Account</a></li>
-        </ul>
+<header>
+    <div class="container clearfix">
+        <h1 id="logo">
+            LOGO
+        </h1>
+        <nav>
+            <a href="">Lorem</a>
+            <a href="">Ipsum</a>
+            <a href="">Dolor</a>
+        </nav>
     </div>
-</div>
+</header>
 <!--NAV END-->
 
 <!--JUMBOTRON START-->
@@ -41,7 +62,8 @@
         <h1>Rent from The Mr. Club</h1>
         <p>Personalized style for everyone.</p>
         <p>Rent unlimited styles hand-selected just for you.</p>
-        <a href="#">BECOME A MEMBER</a>
+        <a href="signup.php"><input type="button" class="enjoy-css" value="BECOME A MEMBER" /></a>
+        <script type="text/javascript" script-name="montserrat" src="http://use.edgefonts.net/montserrat.js"></script>
     </div>
 </div>
 <!--JUMBOTRON END-->
