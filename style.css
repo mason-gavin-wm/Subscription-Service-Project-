@@ -26,7 +26,6 @@
 .jumbotron h1 {
     color: #fff;
     font-size: 38px;
-    font-family: 'Shift', sans-serif;
     font-weight: bold;
 }
 
@@ -58,7 +57,7 @@
     box-sizing: content-box;
     cursor: pointer;
     padding: 10px 20px;
-    border: 1px solid #018dc4;
+    border: 1px solid #02231C;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     font: normal 16px/normal "montserrat", Helvetica, sans-serif;
@@ -98,32 +97,42 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     vertical-align: baseline; }
 
 body {
-    line-height: 1; }
+    line-height: 1;
+    font-family: "Oswald", sans-serif;
+
+}
 
 h1, h2, h3, h4, h5, h6 {
     clear: both;
-    font-weight: normal; }
+    font-weight: normal;
+}
 
 ol, ul {
-    list-style: none; }
+    list-style: none;
+}
 
 blockquote {
-    quotes: none; }
+    quotes: none;
+}
 
 blockquote:before, blockquote:after {
     content: '';
-    content: none; }
+    content: none;
+}
 
 del {
-    text-decoration: line-through; }
+    text-decoration: line-through;
+}
 
 /* tables still need 'cellspacing="0"' in the markup */
 table {
     border-collapse: collapse;
-    border-spacing: 0; }
+    border-spacing: 0;
+}
 
 a img {
-    border: none; }
+    border: none;
+}
 
 /* =Scss Variables
 -------------------------------------------------------------- */
@@ -141,71 +150,89 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
     font-size: 16px;
-    line-height: 1.8; }
+    line-height: 1.8;
+}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1;
-    font-weight: 300; }
+    font-weight: 300;
+}
 
 a {
     text-decoration: none;
-    color: #3cb5f9; }
+    color: #3cb5f9;
+}
 
 a:hover {
-    color: #0793e2; }
+    color: #0793e2;
+}
 
 /* =Template
 -------------------------------------------------------------- */
 #wrapper {
     width: 100%;
-    margin: 0 auto; }
+    margin: 0 auto;
+}
 
 #main {
     background-color: #fff;
-    padding-top: 150px; }
+    padding-top: 150px;
+}
 
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 0 30px; }
+    padding: 0 30px;
+}
 
 section {
-    padding: 60px 0; }
+    padding: 60px 0;
+}
 section h1 {
     font-weight: 700;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+}
 section p {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+}
 section p:last-child {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+}
 section.color {
     background-color: #01604f;
-    color: white; }
+    color: white;
+}
 
 /* =Info Bar
 -------------------------------------------------------------- */
 #info-bar {
-    background-color: #01231c; }
+    background-color: #01231c;
+}
 #info-bar a {
     color: white;
     font-size: 14px;
     text-transform: uppercase;
     display: inline-block;
     margin: 0;
-    padding: 10px; }
+    padding: 10px;
+}
 #info-bar a:hover {
-    background-color: #01231e; }
+    background-color: #01231e;
+}
 #info-bar span.all-tutorials,
 #info-bar span.back-to-tutorial {
     display: block;
-    width: 50%; }
+    width: 50%;
+}
 #info-bar span.all-tutorials {
     float: left;
-    text-align: left; }
+    text-align: left;
+}
 #info-bar span.back-to-tutorial {
     float: right;
-    text-align: right; }
+    text-align: right;
+}
 
 /* =Header
 -------------------------------------------------------------- */
@@ -222,7 +249,8 @@ header {
     -moz-transition: height 0.3s;
     -ms-transition: height 0.3s;
     -o-transition: height 0.3s;
-    transition: height 0.3s; }
+    transition: height 0.3s;
+}
 header h1#logo {
     display: inline-block;
     height: 150px;
@@ -236,32 +264,38 @@ header h1#logo {
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
-    transition: all 0.3s; }
-header nav {
-    display: inline-block;
-    float: right; }
+    transition: all 0.3s;
+}
+
 header nav a {
+    display:inline-block;
+    float:right;
     line-height: 150px;
     margin-left: 20px;
     color: #ffffff;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+}
 header nav a:hover {
-    color: white; }
+    color: white;
+}
 header.smaller {
-    height: 75px; }
+    height: 75px;
+}
 header.smaller h1#logo {
     width: 150px;
     height: 75px;
     line-height: 75px;
-    font-size: 30px; }
+    font-size: 30px;
+}
 header.smaller nav a {
-    line-height: 75px; }
+    line-height: 75px;
+}
 
 /* =Footer
 -------------------------------------------------------------- */
@@ -272,7 +306,8 @@ header.smaller nav a {
     display: block;
     content: "";
     clear: both;
-    height: 0; }
+    height: 0;
+}
 
 /* =Media Queries
 -------------------------------------------------------------- */
@@ -285,38 +320,50 @@ header.smaller nav a {
         margin: 0 auto;
         height: 100px;
         line-height: 100px;
-        text-align: center; }
+        text-align: center;
+    }
     header nav {
         display: block;
         float: none;
         height: 50px;
         text-align: center;
-        margin: 0 auto; }
+        margin: 0 auto;
+    }
     header nav a {
         line-height: 50px;
-        margin: 0 10px; }
+        margin: 0 10px;
+    }
     header.smaller {
-        height: 75px; }
+        height: 75px;
+    }
     header.smaller h1#logo {
         height: 40px;
         line-height: 40px;
-        font-size: 30px; }
+        font-size: 30px;
+    }
     header.smaller nav {
-        height: 35px; }
+        height: 35px;
+    }
     header.smaller nav a {
-        line-height: 35px; } }
+        line-height: 35px;
+    }
+}
 @media all and (max-width: 600px) {
     .container {
-        width: 100%; }
+        width: 100%;
+    }
 
     #info-bar a {
-        display: block; }
+        display: block;
+    }
     #info-bar span.all-tutorials,
     #info-bar span.back-to-tutorial {
-        width: 100%; }
+        width: 100%;
+    }
     #info-bar span.all-tutorials,
     #info-bar span.back-to-tutorial {
         float: none;
-        text-align: center; }
-    #info-bar span.all-tutorials {
-        border-bottom: solid 1px #0793e2; } }
+        text-align: center;
+    }
+
+}

@@ -2,6 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: session1
+ * Date: 4/13/16
+ * Time: 1:33 PM
+ */
+?>
+<?php
+/**
+ * Created by PhpStorm.
+ * User: session1
  * Date: 4/11/16
  * Time: 2:40 PM
  */
@@ -10,8 +18,6 @@
 <html>
 
 <head>
-    <title>The Mr.Club - Home</title>
-    <link rel="icon" type="image/png" href="http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,f_auto,h_1440,q_80,w_720/v1/276997/tie3-2_esnpw2.png">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
 
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
@@ -50,9 +56,9 @@
             The Mr. Club
         </h1>
         <nav>
-            <a href="login.php">LOGIN</a>
+            <a href="">LOGIN</a>
             <a href="collection.php">GET STARTED</a>
-            <a href="faq.html">FAQ</a>
+            <a href=""></a>
         </nav>
     </div>
 </header>
@@ -126,3 +132,4 @@
 </div>
 </body>
 </html>
+
