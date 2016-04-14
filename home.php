@@ -69,10 +69,32 @@
     </div>
 </div>
 <!--JUMBOTRON END-->
+<!--extra info-->
+<div id="what-it-is" >
+    <h2 style="text-emphasis: ;text-align:center;margin-top:50px;"><strong>What is The Mr. Club?</strong></h2>
+    <hr>
+    <p style="font-size:19px; color:#616161; text-align: center;">
+        A clothing subscription service for the man who loves surprises, and has the desire to be stylish, with minimal effort involved.
+    </p>
+    <br>
+    <p style="font-size:19px; color:#616161; text-align: center;">
+        Rent clothing and accessories, with the option to purchase items that are too good to send back. You can now keep a rotating closet and never grow bored with your clothing again. Packs feature a mix of menswear designer labels,
+        everyday brands and key essentials you will love, at a low monthly cost you can love even more.
+    </p>
+    <br>
+    <p style="font-size:19px; color:#616161; text-align: center;">
+        Spend less on the <strong><span style="color: #12372a; text-align: center;">latest fashion trends</span></strong> for men.
+    </p>
+</div>
+<!--Extra INfo-->
+<div id="how-it-works" style="background-color:#616161;">
+    <h2 style="color:white; width:100%; line-height:50px; text-align:center; margin-top:50px;">HOW IT WORKS</h2>
+</div>
 
 <div class="neighborhood-guides">
     <div class="container">
-        <h2>Gallery of Animals</h2>
+
+
         <p>Not sure where to start? We've created an easy process to find the pet you want. <a href="#">Click here to start it</a></p>
         <div class="row">
 

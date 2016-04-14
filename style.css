@@ -76,6 +76,29 @@
     background: #015142;
 }
 
+.button-submit {
+    display: inline-block;
+.box-sizing(content-box);
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #018dc4;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 16px/normal "montserrat", Helvetica, sans-serif;
+    color: rgba(255,255,255,0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #01604f;
+.box-shadow(1px 1px 1px 0 rgba(0,0,0,0.2) );
+    text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+.transition(all 300ms cubic-bezier(0.42, 0, 0.58, 1));
+}
+
+
+.button-submit:hover {
+    background: rgba(1,81,66,1);
+}
+
 
 
 
@@ -98,7 +121,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
     line-height: 1;
-    font-family: "Oswald", sans-serif;
 
 }
 
@@ -133,7 +155,13 @@ table {
 a img {
     border: none;
 }
-
+body {
+    color: #505050;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8;
+}
 /* =Scss Variables
 -------------------------------------------------------------- */
 /* =Global
@@ -145,13 +173,7 @@ a img {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-body {
-    color: #505050;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.8;
-}
+
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -159,14 +181,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
-a {
-    text-decoration: none;
-    color: #3cb5f9;
-}
-
-a:hover {
-    color: #0793e2;
-}
 
 /* =Template
 -------------------------------------------------------------- */
@@ -254,7 +268,7 @@ header {
 header h1#logo {
     display: inline-block;
     height: 150px;
-    line-height: 150px;
+    line-height: 100px;
     float: left;
     font-family: "Oswald", sans-serif;
     font-size: 60px;

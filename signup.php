@@ -5,6 +5,53 @@
  * Date: 4/11/16
  * Time: 2:40 PM
  */
+$dbc = new PDO('mysql:host=127.0.0.1;dbname=themrclubdb', 'root', 'root');
+
+if (isset($_POST['submit'])) {
+    // Grab the profile data from the POST
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+
+    if (!empty($username) && !empty($password)) {
+        // Make sure someone isn't already registered using this username
+        $query = "SELECT * FROM themrclubdb WHERE username = :username";
+        $data = $dbc->prepare($query);
+        $result = $data->execute(
+            array(
+                'username' => $username
+            )
+        );
+
+        if (!$result) {
+            // The username is unique, so insert the data into the database
+            $enter = "INSERT INTO themrclubdb (user_id, first_name, last_name, username, password, email) VALUES (NULL, :first_name, :last_name,:username,:password,:email)";
+            $stmt = $dbc->prepare($enter);
+            $register = $stmt->execute(
+                array(
+                    'first_name => $first_name',
+                    'last_name => $last_name',
+                    'username => $username',
+                    'password => $password',
+                    'email => $email'
+                )
+            );
+
+            // Confirm success with the user
+            echo '<p>Your new account has been successfully created. You\'re now ready to log in and <a href="editprofile.php">edit your profile</a>.</p>';
+
+            exit();
+        }
+        else {
+            // An account already exists for this username, so display an error message
+            echo '<p class="error">An account already exists for this username. Please use a different address.</p>';
+            $username = "";
+        }
+    }
+    else {
+        echo '<p class="error">You must enter all of the sign-up data.</p>';
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,9 +97,11 @@
 <body style="height:1100px">
 <header>
     <div class="container clearfix">
-        <h1 id="logo">
-            The Mr. Club
+        <div id="clear" style="background-color:transparent">
+        <h1>
+        <a href="home.php" style="text-decoration: none; color:white;font-family: 'Oswald', 'sans-serif'">The Mr. Club</a>
         </h1>
+        </div>
         <nav>
             <a href="login.php">LOGIN</a>
             <a href="collection.php">GET STARTED</a>
@@ -65,39 +114,51 @@
 
 </div>
 <!--NAV END-->
-
+<!--FORM START-->
 <div class="neighborhood-guides">
     <div class="container">
         <h2>Sign Up</h2>
         <div class="row">
-            <form class="col s12">
+            <form method="post" action="signup.php" class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
                         <input placeholder="Frist Name" id="first_name" type="text" class="validate">
                         <label for="first_name"></label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
+                        <input placeholder="Last Name" id="last_name" type="text" class="validate">
+                        <label for="last_name"></label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Password</label>
+                        <input placeholder="Username" id="username" type="text" class="validate">
+                        <label for="username"></label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
+                        <input placeholder="Password" id="password" type="password" class="validate">
+                        <label for="password"></label>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Email" id="email" type="email" class="validate">
+                        <label for="email"></label>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <input type="submit" class="button-submit" name="submit" value="SUBMIT" />
+                    <script type="text/javascript" script-name="montserrat" src="http://use.edgefonts.net/montserrat.js"></script>
                 </div>
             </form>
         </div>
 
     </div>
 </div>
+<!--FORM END-->
+
 
 <div class="learn-more">
     <div style = "margin-top:75px;background-color:rgba(238, 238, 238, 0.38);" class="container">
